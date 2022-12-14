@@ -46,5 +46,14 @@ module.exports = defineConfig({
   env: {
       allureReuseAfterSpec: true,
       "allureResultsPath": "allure-results",
-  }
+  },
+
+  reporter: 'mochawesome',  
+  reporterOptions: {   
+       reportDir: 'cypress/results',   
+       overwrite: false,   
+       html: true,  
+       json: false
+   }
+
 });

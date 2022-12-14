@@ -166,14 +166,17 @@
     "wrap-ansi": "^7.0.0",
     "wrappy": "^1.0.2",
     "yallist": "^4.0.0",
-    "yauzl": "^2.10.0"
+    "yauzl": "^2.10.0",
+    "mochawesome":"^7.1.3"
+
+    
   },
   "scripts": {
     "test": "test",
     "cypress:runner": "npx cypress open",
     "cypress:execution": "cypress run",
     "ui-regression-allure": "cypress run --browser chrome --spec cypress/e2e/**/**.feature --env allure=true",
-    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "allure:clear": "rmdir -r allure-results/ allure-report cypress/screenshots",
     "allure:report": "allure generate allure-results --clean -o allure-report",
     "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
   },
